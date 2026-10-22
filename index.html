@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animate Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="branding">
+          <span class="logo"></span>
+          <span>Animate Lab</span>
+        </div>
+
+        <div class="toolbar">
+          <button class="toolbar-button" data-tool="rect">Rect</button>
+          <button class="toolbar-button" data-tool="circle">Circle</button>
+          <button class="toolbar-button" data-tool="text">Text</button>
+          <button class="toolbar-button accent" id="add-layer">New layer</button>
+          <button class="toolbar-button accent" id="add-keyframe">Add keyframe</button>
+          <button class="toolbar-button" id="play-toggle">Play</button>
+        </div>
+      </header>
+
+      <div class="workspace">
+        <aside class="panel left-panel">
+          <div class="panel-header">
+            <h3>Library</h3>
+          </div>
+
+          <div class="tool-stack">
+            <button class="shape-button" data-tool="rect">New Rect</button>
+            <button class="shape-button" data-tool="circle">New Circle</button>
+            <button class="shape-button" data-tool="text">New Text</button>
+          </div>
+
+          <div class="panel-header layer-header">
+            <h3>Layers</h3>
+          </div>
+          <ul id="layer-list" class="layer-list"></ul>
+        </aside>
+
+        <main class="stage-panel">
+          <div class="stage-toolbar">
+            <span>Stage</span>
+            <span id="stage-status">Frame 1</span>
+          </div>
+          <div id="stage" class="stage" aria-label="Animation stage"></div>
+        </main>
+
+        <aside class="panel right-panel">
+          <div class="panel-header">
+            <h3>Inspector</h3>
+          </div>
+
+          <div class="field-grid">
+            <label>
+              X
+              <input id="prop-x" type="number" value="0" />
+            </label>
+            <label>
+              Y
+              <input id="prop-y" type="number" value="0" />
+            </label>
+            <label>
+              W
+              <input id="prop-width" type="number" value="100" />
+            </label>
+            <label>
+              H
+              <input id="prop-height" type="number" value="100" />
+            </label>
+            <label>
+              Rotation
+              <input id="prop-rotation" type="number" value="0" />
+            </label>
+            <label>
+              Fill
+              <input id="prop-fill" type="color" value="#ff6b6b" />
+            </label>
+            <label class="wide-field">
+              Label
+              <input id="prop-text" type="text" value="" placeholder="Type your text" />
+            </label>
+          </div>
+        </aside>
+      </div>
+
+      <footer class="timeline-panel">
+        <div class="timeline-header">
+          <span>Timeline</span>
+          <span id="selected-label">No layer selected</span>
+        </div>
+        <div id="timeline" class="timeline" aria-label="Timeline frames"></div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
