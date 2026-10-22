@@ -3,25 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animate Lab</title>
+    <title>ArtBoy</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="app-shell">
       <header class="topbar">
-        <div class="branding">
-          <span class="logo"></span>
-          <span>Animate Lab</span>
+        <div class="branding" aria-label="ArtBoy brand">
+          <span class="brand-mark"></span>
+          <span class="brand-name">ArtBoy</span>
         </div>
 
-        <div class="toolbar">
+        <nav class="toolbar" aria-label="Main tools">
           <button class="toolbar-button" data-tool="rect">Rect</button>
           <button class="toolbar-button" data-tool="circle">Circle</button>
           <button class="toolbar-button" data-tool="text">Text</button>
           <button class="toolbar-button accent" id="add-layer">New layer</button>
           <button class="toolbar-button accent" id="add-keyframe">Add keyframe</button>
           <button class="toolbar-button" id="play-toggle">Play</button>
-        </div>
+        </nav>
       </header>
 
       <div class="workspace">
